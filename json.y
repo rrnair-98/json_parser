@@ -26,7 +26,7 @@ object			:	object_begin obj_data object_end
 
 
 obj_data		:  	string colon value
-				| 	obj_data comma string colon value
+				| 	string colon value comma object_data
 				;
 
 array			: array_begin array_elements array_end
@@ -34,7 +34,7 @@ array			: array_begin array_elements array_end
 				;
 
 array_elements 	: 	value
-				| 	array_elements comma value
+				| 	value comma array_elements
 				;
 
 value			: string
