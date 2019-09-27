@@ -1,0 +1,5 @@
+namespace json{
+	class JSONNode{
+		
+	}
+}
